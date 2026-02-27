@@ -8,7 +8,7 @@ This is an official implementation of the following paper:
 
 ---
 
-Here is an example to run F2DC on the PACS dataset:
+Here is an example to run our F2DC on the PACS dataset:
 
 
 ```python

@@ -169,15 +169,9 @@ class FedLeaDigits(FederatedDataset):
                 for j in range(parti_num):
                     nets_list.append(resnet10_dc_digits(num_classes=FedLeaDigits.N_CLASS,
                                                  gum_tau=FedLeaDigits.model_args.gum_tau))
-                    # nets_list.append(alexnet_dc_digits(num_classes=FedLeaDigits.N_CLASS,
-                    #                              gum_tau=FedLeaDigits.model_args.gum_tau))
-                    # nets_list.append(mobile_dc_digits(num_classes=FedLeaDigits.N_CLASS,
-                    #                              gum_tau=FedLeaDigits.model_args.gum_tau))
             else:
                 for j in range(parti_num):
                     nets_list.append(resnet10(FedLeaDigits.N_CLASS))
-                    # nets_list.append(vggnet(FedLeaDigits.N_CLASS))
-                    # nets_list.append(mobilenet(FedLeaDigits.N_CLASS))
         else:
             for j in range(parti_num):
                 net_name = names_list[j]

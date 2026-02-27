@@ -114,15 +114,9 @@ class FedLeaPACS(FederatedDataset):
                 for j in range(parti_num):
                     nets_list.append(resnet10_dc(num_classes=FedLeaPACS.N_CLASS,
                                                  gum_tau=FedLeaPACS.model_args.gum_tau))
-                    # nets_list.append(alexnet_dc(num_classes=FedLeaPACS.N_CLASS,
-                    #                              gum_tau=FedLeaPACS.model_args.gum_tau))
-                    # nets_list.append(mobile_dc(num_classes=FedLeaPACS.N_CLASS,
-                    #                              gum_tau=FedLeaPACS.model_args.gum_tau))
             else:
                 for j in range(parti_num):
                     nets_list.append(resnet10(FedLeaPACS.N_CLASS))
-                    # nets_list.append(vggnet(FedLeaPACS.N_CLASS))
-                    # nets_list.append(mobilenet(FedLeaPACS.N_CLASS))
         else:
             for j in range(parti_num):
                 net_name = names_list[j]
@@ -132,13 +126,11 @@ class FedLeaPACS(FederatedDataset):
     @staticmethod
     def get_normalization_transform():
         transform = transforms.Normalize((0.485, 0.456, 0.406),
-                                         (0.229, 0.224, 0.225))
-        
+                                         (0.229, 0.224, 0.225))   
         return transform
 
     @staticmethod
     def get_denormalization_transform():
         transform = DeNormalize((0.485, 0.456, 0.406),
                                 (0.229, 0.224, 0.225))
-        
         return transform

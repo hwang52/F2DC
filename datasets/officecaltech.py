@@ -113,15 +113,9 @@ class FedLeaOfficeCaltech(FederatedDataset):
                 for j in range(parti_num):
                     nets_list.append(resnet10_dc_office(num_classes=FedLeaOfficeCaltech.N_CLASS,
                                                  gum_tau=FedLeaOfficeCaltech.model_args.gum_tau))
-                    # nets_list.append(alexnet_dc_office(num_classes=FedLeaOfficeCaltech.N_CLASS,
-                    #                              gum_tau=FedLeaOfficeCaltech.model_args.gum_tau))
-                    # nets_list.append(mobile_dc_office(num_classes=FedLeaOfficeCaltech.N_CLASS,
-                    #                              gum_tau=FedLeaOfficeCaltech.model_args.gum_tau))
             else:
                 for j in range(parti_num):
                     nets_list.append(resnet10(FedLeaOfficeCaltech.N_CLASS))
-                    # nets_list.append(vggnet(FedLeaOfficeCaltech.N_CLASS))
-                    # nets_list.append(mobilenet(FedLeaOfficeCaltech.N_CLASS))
         else:
             for j in range(parti_num):
                 net_name = names_list[j]
@@ -139,4 +133,4 @@ class FedLeaOfficeCaltech(FederatedDataset):
         transform = DeNormalize((0.485, 0.456, 0.406),
                                 (0.229, 0.224, 0.225))
         return transform
-
+        
