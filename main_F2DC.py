@@ -58,7 +58,7 @@ def parse_args():
     parser.add_argument('--pri_aug', type=str, default='weak', 
                         help='data augmentation')
     parser.add_argument('--online_ratio', type=float, default=1, help='ratio for online clients')
-    parser.add_argument('--learning_decay', type=bool, default=False, help='learning tate decay')
+    parser.add_argument('--learning_decay', type=bool, default=False, help='learning rate decay')
     parser.add_argument('--averaing', type=str, default='weight', help='averaging strategy')
 
     parser.add_argument('--save', type=bool, default=True, help='save model params')
